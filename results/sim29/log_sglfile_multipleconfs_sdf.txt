@@ -35,25 +35,7 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -8.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -8.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -8.2       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -8.2       0.000      0.000    
+1       -7.9       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -65,49 +47,7 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.3       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.2       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.2       0.000      0.000    
+1       -8.0       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -120,54 +60,6 @@ mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
 1       -6.3       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.2       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.2       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.1       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.0       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -185,6 +77,36 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
+1       -6.2       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.3       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.2       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.5       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.3       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
 1       -6.0       0.000      0.000    
 Using random seed: 42
 
@@ -203,7 +125,19 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
+1       -5.8       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
 1       -6.0       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.2       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -227,13 +161,7 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.3       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
-1       -6.3       0.000      0.000    
+1       -6.1       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -263,12 +191,6 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.4       0.000      0.000    
-Using random seed: 42
-
-mode |   affinity | dist from best mode
-     | (kcal/mol) | rmsd l.b.| rmsd u.b.
------+------------+----------+----------
 1       -7.2       0.000      0.000    
 Using random seed: 42
 
@@ -281,13 +203,13 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.3       0.000      0.000    
+1       -7.0       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.3       0.000      0.000    
+1       -6.2       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -305,7 +227,7 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -6.0       0.000      0.000    
+1       -5.9       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -329,19 +251,25 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -8.1       0.000      0.000    
+1       -7.7       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -8.0       0.000      0.000    
+1       -7.6       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -8.1       0.000      0.000    
+1       -7.7       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -6.4       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
@@ -353,10 +281,16 @@ Using random seed: 42
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-1       -7.5       0.000      0.000    
+1       -7.3       0.000      0.000    
 Using random seed: 42
 
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
 1       -7.0       0.000      0.000    
+Using random seed: 42
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+1       -7.5       0.000      0.000    
