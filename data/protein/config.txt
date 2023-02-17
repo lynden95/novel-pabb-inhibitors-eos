@@ -1,0 +1,14 @@
+receptor=pabb_model1.pdbqt
+ligand=abyc3d.pdbqt
+
+center_x=68
+center_y=39
+center_z=59
+
+size_x= 16
+size_y= 16
+size_z= 16
+
+energy_range=10
+exhaustiveness=8
+num_modes= 1
