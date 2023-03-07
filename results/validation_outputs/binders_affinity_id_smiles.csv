@@ -1,0 +1,4 @@
+minimizedAffinity,ID,ST_SMILES
+-5.42970,1,C[C@@H]1C[C@H](C)C(=O)/C=C/[C@@H]2[C@@H](O)[C@@H]3OC4=C(C(=O)O[C@@]42C[C@H]3C)C1=O
+-6.22301,2,C=C(O[C@H]1C=C(C(=O)O)C=C[C@H]1O)C(=O)O
+-5.99761,3,C=C(O[C@@H]1C(F)=C(C(O)O)C=C[C@H]1O)C(=O)O

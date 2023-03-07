@@ -1,4 +1,4 @@
-ID,ST_SMILES
+ID,SMILES
 4,CC1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
 5,C=CC1=C(N)Oc2cc1c(-c1cc(C(C)O)cc(=O)cc1C1NCC(=O)N1)c(OC)c2OC
 8,O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
