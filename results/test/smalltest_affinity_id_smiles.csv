@@ -1,0 +1,5 @@
+minimizedAffinity,ID,ST_SMILES
+-5.62133,4,C[C@@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+-5.90451,8,O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
+-5.87017,9,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)cc21
+-5.71163,17,NS(=O)(=O)c1cc(Cl)c(Cl)c(S(N)(=O)=O)c1

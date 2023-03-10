@@ -1,10 +1,3 @@
-## Notes from tuesday with GT
-
-# want to have my code split into 3 sections - prep smiles / prep ligands / get scores
-
-# each section will take an input csv and output a csv - avoid generating numerous other csv files within each section as this is memory-heavy
-
-
 #import all libraries 
 import os
 import pandas as pd
@@ -29,13 +22,8 @@ SOURCEPATH = "../src"
 
 #define standard arguments/parameters
 
-#standardising
+#smiles prep - standardise and filter
 smiles_csv = os.path.join(DATAPATH, "smiles", "smiles.csv")
-std_smiles_csv = os.path.join(DATAPATH, "smiles", "std_smiles.csv")
-
-#filtering
-csv_200_descriptors = os.path.join(DATAPATH, "smiles", "csv_200_desc.csv")
-smiles_plus_desc = os.path.join(DATAPATH, "smiles", "smiles_descriptors.csv") 
 filtered_std_smiles = os.path.join(DATAPATH, "smiles", "filtered_std_smiles.csv") 
 
 #ligand prep
@@ -55,7 +43,8 @@ affinities_id_smiles = os.path.join(RESULTSPATH, "outputs", "affinity_id_smiles.
 
 
 #define functions
-def smiles_standardiser(smiles_csv):
+
+def prep_smiles(smiles_csv):
 
     df=pd.read_csv(smiles_csv) 
 
@@ -86,56 +75,25 @@ def smiles_standardiser(smiles_csv):
         std_smiles += [std_smi]
 
     df["ST_SMILES"] = std_smiles
+
     df=df[df["ST_SMILES"].notna()]
+
     df.drop(columns = ["SMILES"], inplace=True)
-    df.to_csv(std_smiles_csv, index=False)
 
-    os.remove(smiles_csv)
+    mols = [Chem.MolFromSmiles(smi) for smi in df["ST_SMILES"].tolist()]
 
+    mol_wts = []
 
-
-def mol_descriptor(std_smiles_csv):
-    
-    mols = [Chem.MolFromSmiles(i) for i in std_smiles_csv] 
-    calc = MoleculeDescriptors.MolecularDescriptorCalculator([x[0] for x in Descriptors._descList])
-    desc_names = calc.GetDescriptorNames()
-    
-    Mol_descriptors =[]
     for mol in mols:
-        # add hydrogens to molecules
-        mol=Chem.AddHs(mol)
-        # Calculate all 200 descriptors for each molecule
-        descriptors = calc.CalcDescriptors(mol)
-        Mol_descriptors.append(descriptors)
-    return Mol_descriptors,desc_names 
+        mol_wt = Chem.Descriptors.MolWt(mol)
+        mol_wts += [mol_wt]
 
+    df["mol_wt"] = mol_wts
 
-
-def filterer():
-    
-    df1 = pd.read_csv(std_smiles_csv)
-    Mol_descriptors,desc_names = mol_descriptor(df1['ST_SMILES'])
-    df_200_descriptors = pd.DataFrame(Mol_descriptors,columns=desc_names)
-    df_200_descriptors.to_csv(csv_200_descriptors, index=False)
-
-
-    cols = [5] # can alter here depending on how you want to filter
-    df_molwt = df_200_descriptors[df_200_descriptors.columns[cols]]
-    merged = pd.concat([df1, df_molwt], axis="columns")
-    merged.to_csv(smiles_plus_desc, index=False)
-    os.remove(csv_200_descriptors)
-
-    df = pd.read_csv(smiles_plus_desc)
-
-    # Filter all rows for which the smiles mw is under 100
-    df_filtered = df[df['MolWt'] >= 150]
-    df_filtered = df_filtered[df_filtered['MolWt'] <= 300]
-    df_filtered.drop(columns = ["MolWt"], inplace=True)
+    df_filtered = df[df['mol_wt'] >= 300]
+    df_filtered = df_filtered[df_filtered['mol_wt'] <= 800]
+    df_filtered.drop(columns = ["mol_wt"], inplace=True)
     df_filtered.to_csv(filtered_std_smiles, index=False)
-
-    os.remove(smiles_plus_desc)
-    os.remove(std_smiles_csv) # do I want to do this?
-
 
 
 
@@ -173,6 +131,8 @@ def prepare_ligands_sdf(filtered_std_smiles, pH, header_len=1, output_dir = sdf_
             os.remove(pdb_name) # removes the .pdb files after obabel protonates and converts to .sdf
                        
             out_sdfs.append(sdf_name)
+
+            os.remove(filtered_std_smiles)
 
     return out_sdfs
 
@@ -212,51 +172,17 @@ def docking_cmd():
 def affinities_to_smiles(docking_output):
 
     df = PandasTools.LoadSDF(docking_output, embedProps=True, molColName=None, smilesName='SMILES')
-    df['ID'] = df['ID'].map(lambda x: x.lstrip('../data/validation_lists/').rstrip('.pdb'))
-
-    mols = [Chem.MolFromSmiles(smi) for smi in df["SMILES"].tolist()]
-
-    std_mols = []
-
-    for mol in mols:
-        if mol is not None:
-            try:
-                std_mol = standardise.run(mol)
-            except:
-                std_mol = np.nan
-        else:
-            std_mol = np.nan
-        std_mols += [std_mol]
-
-    std_smiles = []
-
-    for std_mol in std_mols:
-        if std_mol is not None:
-            try: 
-                std_smi = Chem.MolToSmiles(std_mol)
-            except:
-                std_smi=np.nan
-        else:
-            std_smi = np.nan
-        std_smiles += [std_smi]
-
-    df["ST_SMILES"] = std_smiles
-
-    df=df[df["ST_SMILES"].notna()]
-
-    df.drop(columns = ["SMILES"], inplace=True)
-
+    df['ID'] = df['ID'].map(lambda x: x.lstrip('../data/smiles/').rstrip('.pdb'))
     df.to_csv(affinities_id_smiles, index=False)
 
 
-
 def run():
-    os.system(smiles_standardiser(smiles_csv))
-    os.system(mol_descriptor(std_smiles_csv))
-    os.system(filterer(std_smiles_csv, mol_descriptor)) ## what to include here...
-    os.system(prepare_and_merge_ligands(filtered_std_smiles, pH, output_dir=sdf_folder))
-    os.system(docking_cmd())
-    os.system(affinities_to_smiles(docking_output))
+    prep_smiles(smiles_csv)
+    prepare_and_merge_ligands(filtered_std_smiles, pH, output_dir=sdf_folder)
+    os.remove(filtered_std_smiles)
+    os.system(docking_cmd)
+    os.remove(ligands)
+    affinities_to_smiles(docking_output)
 
 
     
