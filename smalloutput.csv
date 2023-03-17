@@ -1,0 +1,5 @@
+minimizedAffinity,ID,SMILES
+-5.54844,4,C[C@@H]1COc2c(N3CC[NH+](C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+-6.00613,8,O=C(O)c1cn(C2CC2)c2cc(N3CC[NH2+]CC3)c(F)cc2c1=O
+-5.73620,9,CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CC[NH2+]CC3)cc21
+-5.81121,17,NS(=O)(=O)c1cc(Cl)c(Cl)c(S(N)(=O)=O)c1
